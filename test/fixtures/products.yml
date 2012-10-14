@@ -11,3 +11,21 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+tsd:
+  title: Triple Stage Darkness
+  description: ZZZ
+  image_url: /image/tsd.jpg
+  price: 777.00
+
+tdd:
+  title: TDD
+  description: Test Driven Development
+  image_url: /image/tdd.jpg
+  price: 12.32
+
+bdd:
+  title: BDD
+  description: Behavior Driven Development
+  image_url: /image/bdd.jpg
+  price: 32.39
