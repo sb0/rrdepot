@@ -38,6 +38,7 @@ require 'test_helper'
 
 # sb: after creating a sample product above, test all possible values of price
 # sb: think of calculus bounds....
+
     product.price = -1
     assert product.invalid?
     assert_equal "-1: must be >= 0.01", product.errors[:price].join('; ')
@@ -50,7 +51,9 @@ require 'test_helper'
     assert_equal "0: must be >= 0.01", product.errors[:price].join('; ') 
 
     product.price = 1
-    assert product.valid?
+    assert product.invalid?
+    assert_equal "1: must be >= 0.01", product.errors[:price].join('; ') 
+
   end
 
 #-------------------------------------------------------------------------------
