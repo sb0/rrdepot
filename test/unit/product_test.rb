@@ -16,7 +16,7 @@ require 'test_helper'
 # sb: create a class that inherits from ActiveSupport::TestCase
 # sb: subclass< ActiveSupport::TestCase
 # sb: instead of def like normal Ruby methods use TEST (test/do blocks)
-	class ProductTest < ActiveSupport::TestCase
+class ProductTest < ActiveSupport::TestCase
 # sb: control which fixture to load from here (recall db/model name matching)
   fixtures :products
 # sb: simple test to check if any product instance is EMPTY
@@ -32,7 +32,7 @@ require 'test_helper'
 # sb: test PRICE FOR ZERO (>=0.01) **very important THIS MEANS MONEY
 # sb: note you could break this apart into 3 tests (-1,0,1)
   test "product price must be positive" do
-    product = Product.new(:title	=> "Triple Stage Darkness",
+    product = Product.new(:title	=> "Triple Stage Darkness-must-be-unique-or-test-will-fail-REGARDLESS-OF-ANYTHING-ELSE",
 			  :description	=> "Real nigga shit",
 			  :image_url	=> "zzz.jpg")
 
@@ -46,13 +46,21 @@ require 'test_helper'
 # sb: you can see above/below how it's more of BDD than TDD
 # sb: is the price logic BEHAVING the way we intended?? 
 # sb: rather than simply 'testing'.... BEHAVING >>>> testing...
+
     product.price = 0
     assert product.invalid?
     assert_equal "0: must be >= 0.01", product.errors[:price].join('; ') 
 
+# sb: Why does the below still fail?
+# sb: Previously failed because the product model used DID NOT
+# sb: have a unique title, so this invalidated the whole product
+# sb: even though all the price tests were OK
     product.price = 1
-    assert product.invalid?
-    assert_equal "1: must be >= 0.01", product.errors[:price].join('; ') 
+    assert product.valid?
+
+#    product.price = 1.00
+#    assert product.valid?
+#    assert_equal "1.00: must be >= 0.01", product.errors[:price].join('; ') 
 
   end
 
