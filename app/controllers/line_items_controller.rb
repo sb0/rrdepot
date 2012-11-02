@@ -61,7 +61,8 @@ class LineItemsController < ApplicationController
 ## sb: ** I FIXED the mass-assign error by adding product
 ## sb: ** to the attr_accessible line in the LineItem model
 
-    @line_item = @cart.line_items.build(:product => product)
+    #@line_item = @cart.line_items.build(:product => product)
+    @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save

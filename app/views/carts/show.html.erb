@@ -1,8 +1,8 @@
 <h2>RR Depot Cart</h2>
 <ul>
   <% @cart.line_items.each do |item| %>
-    <!-- sb: another typo, for the = in <\%= --->
-    <li><%= item.product.title %></li>
+    <!-- sb: another typo, for the = in <\%= -->
+    <li><%= item.product.title %> [<%= item.quantity %>]</li>
   <% end %> 
 </ul>
 <%#= link_to 'Edit', edit_cart_path(@cart) %> 

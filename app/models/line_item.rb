@@ -1,7 +1,7 @@
 class LineItem < ActiveRecord::Base
 # sb: what if I don't want to add :product to attr_accessible?
 # sb: is there a more secure way then to allow for mass-assignment ??
-  attr_accessible :cart_id, :product_id, :product
+  attr_accessible :cart_id, :product_id, :product, :quantity
 # sb: same as above but makes the db relationship with the other models
 # sb: and the corresponding tables (this is why you will see _id appended)
 # sb: it also protects against mass-assignment on the cart_id, product_id
