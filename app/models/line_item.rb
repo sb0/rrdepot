@@ -9,4 +9,9 @@ class LineItem < ActiveRecord::Base
 # sb: so since belongs_to relationship.. needs id for each belong_to for lookup
   belongs_to :product
   belongs_to :cart
+
+
+  def total_price
+    product.price * quantity
+  end
 end
