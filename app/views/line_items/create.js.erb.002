@@ -1,0 +1,9 @@
+$("#cart").html("<%= escape_javascript(render(@cart)) %>");
+<% if @cart.total_items == 1 %>
+   $("#cart").slideDown();
+<% end %>
+
+
+$("#current_item").effect("highlight", {color: 'orange'}, 3000);
+$(".highlight").effect("highlight", {color: 'red'}, 3000);
+

@@ -182,3 +182,9 @@ table {
   border-bottom: 1px dotted #595;
   margin-bottom: 10px;
 }
+
+#current_item {
+  background-color: purple;
+  background-color: #141;
+
+}

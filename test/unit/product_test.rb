@@ -38,6 +38,7 @@ class ProductTest < ActiveSupport::TestCase
 
 # sb: after creating a sample product above, test all possible values of price
 # sb: think of calculus bounds....
+# sb: the .valid and .invalid methods use the validates keyword from the model
 
     product.price = -1
     assert product.invalid?
