@@ -1,5 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+
+#sb: The book does not use id's and just uses name and strings and relies on Rails to resolve id for us
 one:
   product_id: 1
   cart_id: 1
@@ -7,3 +9,11 @@ one:
 two:
   product_id: 1
   cart_id: 1
+
+three:
+  product: wd4d
+  cart: two
+
+four:
+  product: wd4d
+   cart: two

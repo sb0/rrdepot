@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: sb
+  address: somewhere
+  email: sb@sbkta.net
+  pay_type: Check
+
+two:
+  name: sb0
+  address: nowhere
+  email: sb0.sbkta.com
+  pay_type: Credit Card
+
+three:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString
