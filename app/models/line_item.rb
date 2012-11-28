@@ -7,6 +7,7 @@ class LineItem < ActiveRecord::Base
 # sb: it also protects against mass-assignment on the cart_id, product_id
 # sb: so you must explicitly set with attr_accessible as above
 # sb: so since belongs_to relationship.. needs id for each belong_to for lookup
+  belongs_to :order
   belongs_to :product
   belongs_to :cart
 
