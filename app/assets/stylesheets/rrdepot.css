@@ -184,6 +184,10 @@ table {
   margin-bottom: 10px;
 }
 
+#cart {
+  margin-bottom: 10px;
+
+}
 #current_item {
   background-color: purple;
   background-color: #141;
@@ -220,4 +224,34 @@ table {
 
 .depot_form div {
   margin: 0.5em 0;
+}
+
+.sidebar_menu {
+  font-size: 8pt;
+
+}
+
+#nav_menu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#admin_menu {
+  /* sb: issues combining margin properties on one line */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#admin_menu a {
+  display: block;
+}
+
+.admin_logout {
+  margin-top: 8px;
+  margin-bottom: 10px;
+
+}
+#admin_menu_title {
+  font: 130% bold;
+  text-decoration: underline;
+  color: yellow;
 }

@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+<% SALT = "NaCl" unless defined?(SALT) %>
+
 one:
-  name: MyString
-  passwd: MyString
-  salt: MyString
+  name: prospect
+# sb: you need to use hashed passwd
+#  passwd: mypasswd
+  passwd: <%= User.encrypt_password('mypasswd', SALT) %>
+  salt: <%= SALT %>
 
 two:
-  name: MyString
-  passwd: MyString
-  salt: MyString
+  name: hacker
+  passwd: <%= User.encypt_password('NOTmypasswd', SALT) %>
+  salt: <%= SALT %>

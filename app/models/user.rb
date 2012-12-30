@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   attr_reader :password #sb: writer has custom implementation
 
   validate :password_must_be_present
+
+  after_destroy :ensure_admin_remains
 #===========================================================================` 
     def User.authenticate(name, password)
       if user = find_by_name(name)
@@ -32,6 +34,12 @@ class User < ActiveRecord::Base
         self.passwd = self.class.encrypt_password(password, salt)
       end
     end 
+
+    def ensure_admin_remains
+      if User.count.zero?
+        raise 'Can\'t delete last admin'
+      end
+    end
   
 #===============================================================================
   private
