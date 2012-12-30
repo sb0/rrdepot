@@ -4,6 +4,7 @@ Rrdepot::Application.routes.draw do
   # sb: resources :models allows models_path 
  
   get 'admin' => 'admin#index'
+  get 'store' => 'store#index'
 
   # sb: no scaffolding for sessions controller
   #     must define http actions to controller actions manually
@@ -13,7 +14,7 @@ Rrdepot::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  scope '(:locale)' do
+ scope '(:locale)' do
     resources :users
     resources :orders
     resources :line_items

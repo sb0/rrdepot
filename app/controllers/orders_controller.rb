@@ -59,8 +59,9 @@ class OrdersController < ApplicationController
         session[:cart_id] = nil
         # sb: send mail notice (order details) to customer
         Notifier.order_received(@order).deliver
-        format.html { redirect_to(store_url, :notice => 'Thank you for your order.') }
         #format.html { redirect_to @order, :notice => 'Order was successfully created.' }
+        #format.html { redirect_to(store_url, :notice => 'Thank you for your order.') }
+        format.html { redirect_to(store_url, :notice => I18n.t('.thanks') }
         format.json { render :json => @order, :status => :created, :location => @order }
       else
         format.html { render :action => "new" }
