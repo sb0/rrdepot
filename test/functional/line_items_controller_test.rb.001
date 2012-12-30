@@ -41,7 +41,7 @@ class LineItemsControllerTest < ActionController::TestCase
     # and not Prototype, trying assert_select_jquery
     # since assert_select_js did not work
     #assert_select_rjs :replace_html, 'cart' do
-    assert_select_jquery 'cart' do
+    assert_select_jquery :html, 'cart' do
       assert_select 'tr#current_item td', /Programming Ruby 1.9/
     end
   end

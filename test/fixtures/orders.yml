@@ -3,13 +3,13 @@
 one:
   name: sb
   address: somewhere
-  email: sb@sbkta.net
+  email: validate me for authentic e-mail
   pay_type: Check
 
 two:
   name: sb0
   address: nowhere
-  email: sb0.sbkta.com
+  email: sb0@sbkta.com
   pay_type: Credit Card
 
 three:
@@ -17,3 +17,9 @@ three:
   address: MyText
   email: MyString
   pay_type: MyString
+
+four:
+  name: sb.test
+  address: Validate me for real address
+  email: hiphophe@gmail.com
+  pay_type: Credit Cart

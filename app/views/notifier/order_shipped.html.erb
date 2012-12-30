@@ -1,0 +1,11 @@
+<h3>RRD Order Shipped</h3>
+<p>Your order from RRD has been shipped.</p>
+<p>Order Details:</p>
+
+<table>
+  <tr>
+    <th colspan="2">Quantity</th>
+    <th>Description</th>
+  </tr>
+  <% render @order.line_items %>
+</table>
