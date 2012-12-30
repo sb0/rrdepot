@@ -26,6 +26,7 @@ es:
       title: "Carrito de la Compra"
       empty: "Vaciar Carrito"
       checkout: "Comprar"
+      checkout_html: "Comprar"
 
   number:
     currency:

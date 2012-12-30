@@ -26,6 +26,7 @@ fr:
       title: "Votre Carte"
       empty: "Empty cart"
       checkout: "Ach&eacute;te"
+      checkout_html: "Ach&eacute;te"
 
   number:
     currency:

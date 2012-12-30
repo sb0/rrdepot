@@ -13,10 +13,10 @@
   <div id="banner">
   <!-- sb: insert locale switcher in top-right -->
     <%= form_tag store_path, :class => 'locale' do %>
-      <%= select_tag 'set_locale', 
+      Language: <%= select_tag 'set_locale', 
                     options_for_select(LANGUAGES, I18n.locale.to_s), 
                     :onchange => 'this.form.submit()' %>
-      <%= submit_tag 'submit' %>
+      <%#= submit_tag 'Translate' %>
       <%= javascript_tag "$$('.locale input').each(Element.hide)" %> 
     <% end %> 
     

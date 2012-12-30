@@ -14,10 +14,10 @@ Rrdepot::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
+    resources :line_items
  scope '(:locale)' do
     resources :users
     resources :orders
-    resources :line_items
     resources :carts
 #    get "store/index"
     resources :products do
