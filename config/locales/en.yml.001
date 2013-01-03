@@ -2,19 +2,22 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  
+  hello: "Hello world"
+  thanks: "Thank you for your order"
+
   layouts:
     application:
-      title:  "RR Depot Catalog"
+      title: "RR Depot Catalog"
       home:     "Home"
-      store:   "Store"
+      store:    "Store"
       faq:      "FAQ"
       contact:  "Contact"
       about:    "About"
-      about_html:    "About"
 
   store:
     index:
+      title: "Store Catalog"
+      add:  "Add to Cart"
       title_html: "Store Catalog"
       add_html:  "Add to Cart"
 
@@ -25,14 +28,14 @@ en:
       checkout: "Checkout"
       checkout_html: "Checkout"
 
-  number:
-    currency:
-      format:
-        unit:	"$"
-        precision: 2
-        separator: "."
-        delimiter: ","
-        format:  "%u%n"
+#  number:
+#    currency:
+#      format:
+#        unit:		"$"
+#        precision:	2
+#        separator:	"."
+#        delimiter:	","
+#        format: 	"%u%n"
 
   orders:
     new:
@@ -45,5 +48,3 @@ en:
       pay_prompt_html: "Select a payment method"
       submit: "Place Order"
 
-  hello: "Hello world"
-  thanks: "Thank you for your order"

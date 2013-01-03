@@ -37,6 +37,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
+# sb: ensure a default locale is picked if URL does not set
     def default_url_options
       { :locale => I18n.locale }
     end

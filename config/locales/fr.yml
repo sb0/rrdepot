@@ -13,11 +13,10 @@ fr:
       faq:	"FAQ"
       contact:	"Appeller"
       about:	"Pr&eacute;p"
+      about_html: "Pr&eacute;p"
 
   store:
     index:
-      title:       "Catalog de RR Depot"
-      add:         "Appende &aacute; carte"
       title_html:       "Catalog de RR Depot"
       add_html:         "Appende &aacute; carte"
 
@@ -72,4 +71,7 @@ fr:
         other:    "%{count} errores han impedido que este %{model} s
 e guarde"
 
+  hello: "Hello world"
+  thanks: "Thank you for your order"
+  about_html: "Pr&eacute;p"
 

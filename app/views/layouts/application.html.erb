@@ -21,8 +21,7 @@
     <% end %> 
     
     <%= image_tag("logo.png") %>
-    <%#= @page_title || "RR Depot Catalog" %>
-    <%= @page_title || t('.title') %>
+    <%= @page_title || t('layouts.application.title') %>
   </div>
   <div id="columns">
     <div id="side">
@@ -47,8 +46,17 @@
         <a href="/store"><%= t('.store') %></a>
         <a href="/faq"><%= t('.faq') %></a>
         <a href="/contact"><%= t('.contact') %></a>
-        <a href="/about"><%= t('.about') %></a>
+        <a href="/about"><%= t('.about_html') %></a>
       </div>
+<!--
+      <div id="nav_menu" class="sidebar_menu">
+        <a href="/"><%#= t('home') %></a>
+        <a href="/store"><%#= t('.store') %></a>
+        <a href="/faq"><%#= t('faq') %></a>
+        <a href="/contact"><%#= t('contact') %></a>
+        <a href="/about"><%#= t('about_html') %></a>
+      </div>
+-->
 
       <% if session[:user_id] %>
         <div id="admin_menu" class="sidebar_menu">
