@@ -11,5 +11,5 @@ one:
 
 two:
   name: hacker
-  passwd: <%= User.encypt_password('NOTmypasswd', SALT) %>
+  passwd: <%= User.encrypt_password('NOTmypasswd', SALT) %>
   salt: <%= SALT %>
