@@ -10,6 +10,7 @@ Rrdepot::Application.configure do
   config.whiny_nils = true
 
   # Show full error reports and disable caching
+  # sb: invert below for prod: 0/1
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 

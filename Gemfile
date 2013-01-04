@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
+# sb: "bleeding edge" , bundle install will actually install the gems
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# sb: load db adapters
 gem 'sqlite3'
 gem 'mysql'
+gem 'pg'
 
-gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,16 +29,38 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'json'
 # To use Jbuilder templates for JSON
  gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
 
+# Deplay with Passenger
+gem 'passenger'
+
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug'
 
 gem 'will_paginate', '>= 3.0'
+
+group :development do
+
+
+
+end
+
+
+group :test do
+
+
+end
+
+
+group :production do
+
+
+end
