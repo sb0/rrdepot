@@ -2,17 +2,39 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-  hello: "Hola World"
+  hello: "Hola Mun"
   thanks: "Gracias por su pedido"
 
   layouts:
     application:
-      title:	"RR Depot Catalog"
-      home:	"Inicio"
-      store:	"Store"
-      faq:	"Preguntas"
-      contact:	"Contacto"
-      about:	"About"
+      title: "RR Depot Catalog"
+      home: "Inicio"
+      store: "Store"
+      faq: "Preguntas"
+      contact: "Contacto"
+      about: "About"
+      about_html: "About"
+      hello: "Oye Munde"
+    test:
+      tit: "RR Depot Tit"
+      hello: "Hi Layout"
+      title: "RR Depot Testalog"
+      home: "Inicio"
+      store: "Store"
+      faq: "Preguntas"
+      contact: "Contacto"
+      about: "Sobre"
+      about_html: "Sobre"
+    app:
+      title: "RR Depot Catalog"
+      home: "Inicio"
+      store: "Store"
+      faq: "Preguntas"
+      contact: "Contacto"
+      about: "Sobre"
+      about_html: "Sobre"
+      tit: "RR Depot Tit"
+      hello: "Hi Layout"
 
   store:
     index:

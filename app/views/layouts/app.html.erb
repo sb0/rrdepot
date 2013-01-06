@@ -29,15 +29,6 @@
         <% end %>
       <% end %>
 
-<!--
-      <div id="nav_menu" class="sidebar_menu">
-        <a href="/">Home</a>
-        <a href="/store">Store</a>
-        <a href="/faq">FAQ</a>
-        <a href="/contact">Contact</a>
-        <a href="/about">About</a>
-      </div>
--->
       <div id="nav_menu" class="sidebar_menu">
         <a href="/"><%= t('.home') %></a>
         <a href="/store"><%= t('.store') %></a>
@@ -45,15 +36,6 @@
         <a href="/contact"><%= t('.contact') %></a>
         <a href="/about"><%= t('.about_html') %></a>
       </div>
-<!--
-      <div id="nav_menu" class="sidebar_menu">
-        <a href="/"><%#= t('home') %></a>
-        <a href="/store"><%#= t('.store') %></a>
-        <a href="/faq"><%#= t('faq') %></a>
-        <a href="/contact"><%#= t('contact') %></a>
-        <a href="/about"><%#= t('about_html') %></a>
-      </div>
--->
 
       <% if session[:user_id] %>
         <div id="admin_menu" class="sidebar_menu">

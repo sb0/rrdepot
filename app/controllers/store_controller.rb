@@ -9,7 +9,7 @@ class StoreController < ApplicationController
       @products = Product.all
       @cart = current_cart
       #render(:layout => 'test')
-      render(:layout => 'app')
+      #render(:layout => 'app')
       #render(:layout => 'moved')
     end
   end

@@ -8,7 +8,6 @@
 </head>
 <body>
   <p><%= t('.title') %></p>
-  <p><%= t('layouts.application.title') %></p>
   <p><%= t('.tit') %></p>
   <p><%= t('.hello') %></p>
 <div id="" class="">
@@ -17,6 +16,14 @@
 <div id="" class="">
 
 </div>
+
+      <div id="nav_menu" class="sidebar_menu">
+        <a href="/"><%= t('.home') %></a>
+        <a href="/store"><%= t('.store') %></a>
+        <a href="/faq"><%= t('.faq') %></a>
+        <a href="/contact"><%= t('.contact') %></a>
+        <a href="/about"><%= t('.about_html') %></a>
+      </div>
 
 <%= yield %>
 
