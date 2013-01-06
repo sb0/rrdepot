@@ -1,0 +1,12 @@
+{ 
+  :en => { 
+    :layouts => {
+      :title => 'RR Depot Catalog'
+    },
+    :store => {
+      :index => {
+        :add_html => 'Add to cart'
+      }
+    }
+  }
+}

@@ -15,13 +15,17 @@ Rrdepot::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # sb: Set true if you want to use live compiling (runtime compliation)
+  # sb: true will fix scaffold.css not precompiled error
+  #config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
+  #config.assets.manifest = Rails.root.join("app/assets")
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
@@ -46,7 +50,9 @@ Rrdepot::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
+  # sb: Production gets runtime error. try enabling below
+   #config.assets.precompile += %w( search.js )
+   config.assets.precompile += %w( rrdepot.css scaffolds.css logo.png )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

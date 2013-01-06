@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RR Depot Store</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag 	"application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="store">
+  <div id="banner">
+  <!-- sb: insert locale switcher in top-right -->
+    <%= form_tag store_path, :class => 'locale' do %>
+      Language: <%= select_tag 'set_locale', 
+                    options_for_select(LANGUAGES, I18n.locale.to_s), 
+                    :onchange => 'this.form.submit()' %>
+      <%#= submit_tag 'Translate' %>
+      <%= javascript_tag "$$('.locale input').each(Element.hide)" %> 
+    <% end %> 
+    
+    <%= image_tag("logo.png") %>
+    <%= @page_title || t('.title') %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+          <!-- storecontroller/index defines a @cart -->
+          <%= render @cart %>
+        <% end %>
+      <% end %>
+
+      <div id="nav_menu" class="sidebar_menu">
+        <a href="/"><%= t('.home') %></a>
+        <a href="/store"><%= t('.store') %></a>
+        <a href="/faq"><%= t('.faq') %></a>
+        <a href="/contact"><%= t('.contact') %></a>
+        <a href="/about"><%= t('.about_html') %></a>
+      </div>
+
+      <% if session[:user_id] %>
+        <div id="admin_menu" class="sidebar_menu">
+          <div id="admin_menu_title">Admin Menu</div>
+          <%= link_to 'Orders', orders_path %>
+          <%= link_to 'Products', products_path %>
+          <%= link_to 'Users', users_path %>
+          <%= button_to 'Admin: Sign-off', logout_path, :method => :delete, 
+                                                        :form_class => 'admin_logout'
+           %>
+        </div>
+      <% end %>
+    </div>
+    <!-- end of sidebar -->
+    <div id="main">
+      <!-- the view rendered from controller/action 
+          routed URL will go below -->
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

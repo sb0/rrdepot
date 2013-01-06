@@ -70,6 +70,5 @@ Product.create(:title => 'Rails Test Prescriptions',
 Product.create(:title => 'Sit in Dark Tee', 
   :description => 
     %{Darkman sitting in spiral of darkness t-shirt},
-:q
   :image_url => '',
   :price => 14.95)

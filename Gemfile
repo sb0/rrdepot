@@ -36,7 +36,7 @@ gem 'json'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Deplay with Passenger
+# Deploy with Passenger
 gem 'passenger'
 
 # Deploy with Capistrano

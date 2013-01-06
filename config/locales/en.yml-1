@@ -2,50 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
   
   layouts:
     application:
       title:  'RR Depot Catalog'
-      tit: "Just WORK!!"
-      home: "Home"
-      store: "Store"
-      faq: "FAQ"
-      contact: "Contact"
-      about: "About"
-      about_html: "About"
-      hello: "Hi Layout"
-    test:
-      title: 'RR Depot Testalog'
-      tit: "Just WORK!!"
-      home: "Home"
-      store: "Store"
-      faq: "FAQ"
-      contact: "Contact"
-      about: "About"
-      about_html: "About"
-      hello: "Hi Layout"
-    app:
-      title: 'RR Depot Catalog'
-      tit: "Just WORK!!"
-      home: "Home"
-      store: "Store"
-      faq: "FAQ"
-      contact: "Contact"
-      about: "About"
-      about_html: "About"
-      hello: "Hi Layout"
-    moved:
-      title: 'RR Depot Testalog'
-      tit: "Just WORK!!"
-      home: "Home"
-      store: "Store"
-      faq: "FAQ"
-      contact: "Contact"
-      about: "About"
-      about_html: "About"
-      hello: "Hi Layout"
-
+      home:     "Home"
+      store:   "Store"
+      faq:      "FAQ"
+      contact:  "Contact"
+      about:    "About"
+      about_html:    "About"
 
   store:
     index:
@@ -79,4 +45,5 @@ en:
       pay_prompt_html: "Select a payment method"
       submit: "Place Order"
 
+  hello: "Hello world"
   thanks: "Thank you for your order"
