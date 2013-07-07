@@ -4,7 +4,10 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
   before_filter :set_i18n_locale_from_params
   protect_from_forgery
-  
+# sb: Override default layouts/application.html.erb due to translation issue
+#  layout "app"  
+
+
   private
 
     def current_cart

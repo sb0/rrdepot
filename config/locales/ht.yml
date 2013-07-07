@@ -1,14 +1,25 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-en:
+ht:
   hello: "Hello world"
 
   layouts:
     application:
-      title:	"RR Depot Catalog"
-      home:	"Home"
-      store:	"Store"
-      faq:	"FAQ"
-      contact:	"Contact"
-      about:	"About"
+      title:  "RR Depot Catalog (ht)"
+      home:  "Home (ht)"
+      store: "Store (ht)"
+      faq: "FAQ (ht)"
+      contact: "Contact (ht)"
+      about: "About (ht)"
+      about_html: "About (ht)"
+    app:
+      title:	"RR Depot Catalog (ht)"
+      home:	"Home (ht)"
+      store:	"Store (ht)"
+      faq:	"FAQ (ht)"
+      contact:	"Contact (ht)"
+      about:	"About (ht)"
+      about_html: "About (ht)"
+
+  store:
+    index:
+      title_html: "Store Catalog (ht)"
+      add_html: "Add to cart (ht)"

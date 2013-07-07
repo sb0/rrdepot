@@ -92,6 +92,3 @@ es:
         one:      "1 error ha impedido que este %{model} se guarde"
         other:    "%{count} errores han impedido que este %{model} s
 e guarde"
-
-
-

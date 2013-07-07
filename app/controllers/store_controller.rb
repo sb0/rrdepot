@@ -8,9 +8,10 @@ class StoreController < ApplicationController
     else
       @products = Product.all
       @cart = current_cart
+      #render(:layout => 'moved')
       #render(:layout => 'test')
       #render(:layout => 'app')
-      #render(:layout => 'moved')
+      #render(:layout => 'application')
     end
   end
 end
